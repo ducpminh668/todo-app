@@ -1,0 +1,14 @@
+<div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+        <div class="checkbox">
+            <input type="checkbox" ng-model="vm.todo.isDone" ng-change="vm.updateTodo(vm.todo)">
+            <a href ng-click="vm.delelteTodo(todo)">
+                <i class="fas fa-times"></i>
+            </a>
+            <a href ng-click="textBtnForm.$show()" ng-hide="textBtnForm.$visible">
+                <i class="far fa-edit"></i>
+            </a>
+            <span ng-class="{strike : vm.todo.isDone}" editable-text="vm.todo.text" e-form="textBtnForm" onaftersave="vm.updateTodo(vm.todo)">{{ vm.todo.text }}</span>
+        </div>
+    </div>
+</div>

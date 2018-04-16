@@ -1,0 +1,32 @@
+<header>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">WebSiteName</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active">
+          <a ui-sref="index">Home</a>
+        </li>
+        <li>
+          <a ui-sref="about">About</a>
+        </li>
+        <li>
+          <a ui-sref="login">Login</a>
+        </li>
+        <li>
+          <a ui-sref="register">register</a>
+        </li>
+        <li>
+          <a href ng-click="vm.logout()">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<!-- end header -->
+
+<ui-view></ui-view>
+
+<footer>This is footer</footer>
+<!-- end footer -->

@@ -1,0 +1,16 @@
+<div id="todo-list">
+    <task-item ng-repeat="todo in vm.todos" todo="todo"></task-item>
+</div>
+
+
+<div class="row" id="todo-form">
+    <div class="col-sm-8 col-sm-offset-2 text-center">
+        <form name="todoListForm" ng-submit="vm.addTodoList()" novalidate>
+            <div class="form-group">
+                <input type="text" class="form-control input-lg text-center" placeholder="What do you want to do?">
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg">Add</button>
+        </form>
+    </div>
+</div>

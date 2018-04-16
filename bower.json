@@ -1,0 +1,27 @@
+{
+  "name": "todo-app",
+  "authors": [
+    "ducpminh668 <ducpminh668@gmail.com>"
+  ],
+  "description": "",
+  "main": "app.js",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.2.0",
+    "angular": "^1.6.9",
+    "angular-ui-router": "^1.0.7",
+    "angular-mocks": "^1.6.9",
+    "angular-messages": "^1.6.9",
+    "ngstorage": "^0.3.11",
+    "angular-xeditable": "^0.8.1"
+  }
+}

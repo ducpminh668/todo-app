@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <link rel="stylesheet" href="bower_components/angular-xeditable/dist/css/xeditable.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="app/pages/login/login.css">
+    <link rel="stylesheet" href="app/components/Task/task.css">
+    
+</head>
+
+<body id="app-container">
+
+    <ui-view ng-cloak></ui-view>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.min.js"></script>
+    <script src="bower_components/angular-mocks/angular-mocks.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/ngstorage/ngStorage.min.js"></script>
+    <script src="bower_components/angular-xeditable/dist/js/xeditable.min.js"></script>
+
+    <script src="app/pages/pages.module.js"></script>
+    <script src="app/pages/shared/layout/layout.js"></script>
+    <script src="app/pages/register/register.component.js"></script>
+    <script src="app/pages/login/login.component.js"></script>
+    <script src="app/pages/home/home.component.js"></script>
+    
+    <script src="app/components/components.module.js"></script>
+    <script src="app/components/Task/task.component.js"></script>
+    <script src="app/components/Task/TaskItem/taskItem.component.js"></script>
+    <script src="app/components/Jumbotron/jumbotron.component.js"></script>
+    
+
+    <script src="app/services/api/api.module.js"></script>
+    <script src="app/services/api/authentication.service.js"></script>
+    <script src="app/services/services.module.js"></script>
+
+    <script src="app/app.module.js"></script>
+    <script src="app/app.config.js"></script>
+    <script src="app/app.js"></script>
+    
+    <!-- fake authentication api -->
+    <script src="mocks/fake-authenticationApi.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+.container--login--form {
+    background-color: #fafffc;
+}
+.text-center {
+    text-align: center;
+}
+.form-check {
+    padding: 13px;
+}
+.login--form {
+    margin: auto;
+    margin-top: 120px;
+    float: none;
+    background: #012f508f;
+    padding: 42px;
+    color: #f7f1f1;
+}
+
+.login--form a {
+    color: #fff;
+    text-decoration: none;
+}
