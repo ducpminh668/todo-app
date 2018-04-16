@@ -1,4 +1,4 @@
-Testing todo-app TDD
+<h1>Testing todo-app TDD</h1>
 
-* install bower install
-* run using http-sever
+* run bower install
+* run http-sever 
