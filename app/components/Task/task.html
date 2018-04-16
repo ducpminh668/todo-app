@@ -1,16 +1,15 @@
 <div id="todo-list">
-    <task-item ng-repeat="todo in vm.todos" todo="todo"></task-item>
+    <task-item ng-repeat="todo in vm.todos" todo="todo" on-change="vm.notifiedFromTaskItem()"></task-item>
 </div>
-
 
 <div class="row" id="todo-form">
     <div class="col-sm-8 col-sm-offset-2 text-center">
         <form name="todoListForm" ng-submit="vm.addTodoList()" novalidate>
             <div class="form-group">
-                <input type="text" class="form-control input-lg text-center" placeholder="What do you want to do?">
+                <input type="text" class="form-control input-lg text-center" ng-model="vm.todoText" placeholder="What do you want to do?"
+                    required>
             </div>
-
-            <button type="submit" class="btn btn-primary btn-lg">Add</button>
+            <button type="submit" ng-disabled="todoListForm.$invalid" class="btn btn-primary btn-lg">Add</button>
         </form>
     </div>
 </div>

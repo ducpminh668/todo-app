@@ -8,13 +8,13 @@
             controller: jumbotronController,
             controllerAs: 'vm',
             bindings: {
-
+                view: '<'
             }
         });
 
     jumbotronController.$inject = [];
 
     function jumbotronController() {
-        
+        var vm = this;
     }
 })(angular);

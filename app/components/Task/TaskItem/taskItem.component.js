@@ -8,21 +8,25 @@
             controller: taskItemController,
             controllerAs: 'vm',
             bindings: {
-                todo: '='
+                todo: '=',
+                onChange: '&'
             }
         });
 
-    taskItemController.$inject = [];
+    taskItemController.$inject = ['TaskService'];
 
-    function taskItemController() {
+    function taskItemController(TaskService) {
         var vm = this;
         vm.updateTodo = function (todo) {
             // Todo: update todo
-            
+            TaskService.updateTask(todo);
+            vm.onChange();
         }
 
-        vm.delelteTodo = function (todo) {
+        vm.deleteTodo = function (todo) {
             //Todo : delete todo
+            TaskService.deleteTask(todo);
+            vm.onChange();
         }
     }
 })(angular);

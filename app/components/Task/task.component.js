@@ -8,21 +8,29 @@
             controller: taskController,
             controllerAs: 'vm',
             bindings: {
-
+                onTaskChange: '&'
             }
         });
 
-    taskController.$inject = [];
-    function taskController() {
+    taskController.$inject = ['TaskService'];
+    function taskController(TaskService) {
         var vm = this;
-        vm.todos = [
-            { text: "hoc nodejs", isDone: true },
-            { text: "hoc angularjs", isDone: false },
-            { text: "hoc vuejs", isDone: true },
-        ];
+        loadTask();
+        function loadTask() {
+            TaskService.getAllTask().then(function (data) {
+                vm.todos = data;
+                vm.onTaskChange({ $event: { count: vm.todos.length } });
+            });
+        }
+
+        vm.notifiedFromTaskItem = function () {
+            loadTask();
+        }
 
         vm.addTodoList = function () {
-            vm.todos.push({ text: "hoc reactjs", isDone: false })
+            TaskService.createTask({ text: vm.todoText, isDone: false });
+            vm.todoText = "";
+            loadTask();
         }
     }
 

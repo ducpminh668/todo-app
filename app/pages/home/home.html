@@ -1,4 +1,4 @@
 <div class="container">
-    <jumbotron></jumbotron>
-    <task></task>
+    <jumbotron view="vm.count"></jumbotron>
+    <task on-task-change="vm.count = $event.count"></task>
 </div>

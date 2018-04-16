@@ -12,9 +12,10 @@
             }
         });
 
-        homeController.$inject = [];
+    homeController.$inject = [];
 
-        function homeController() {
-            
-        }
+    function homeController() {
+        var vm = this;
+        vm.count = 0;
+    }
 })(angular);

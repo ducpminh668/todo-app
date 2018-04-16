@@ -2,7 +2,7 @@
     <div class="col-sm-6 col-sm-offset-3">
         <div class="checkbox">
             <input type="checkbox" ng-model="vm.todo.isDone" ng-change="vm.updateTodo(vm.todo)">
-            <a href ng-click="vm.delelteTodo(todo)">
+            <a href ng-click="vm.deleteTodo(vm.todo)">
                 <i class="fas fa-times"></i>
             </a>
             <a href ng-click="textBtnForm.$show()" ng-hide="textBtnForm.$visible">
